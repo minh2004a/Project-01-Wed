@@ -352,27 +352,21 @@ a {
     background: #fff;
 }
 
-.course-list .card {
-    overflow: hidden;
-    border-radius: 12px 12px 0 0;
-}
-
-.course-list .card {
-    transition: transform 0.3s ease;
-}
-
-.course-list .card:hover .thump {
-    transform: scale(1.1);
+.course-list .item:hover {
+    box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
 }
 
 .course-list .thump {
     display: block;
-    width: calc(100% + 2px);
+    width: 100%;
     height: 278px;
-    margin: -1px;
-    border-radius: 12px 12px 0 0;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.35s ease;
+}
+
+.course-list .item:hover .thump {
+    transform: scale(1.08);
 }
 
 .course-list .info {
@@ -385,7 +379,15 @@ a {
     align-items: center;
 }
 
-.course-list .info .title {
+.course-list .item > a {
+    display: block;
+    width: calc(100% + 2px);
+    margin: -1px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.course-list .info .title a {
     color: #171100;
     font-size: 1.8rem;
     font-weight: 600;
@@ -426,5 +428,87 @@ a {
 .course-list .foot .btn {
     cursor: pointer;
     border: none;
-    background: #ffb900;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.course-list .foot .btn:hover {
+    background: var(--primary-color);
+}
+
+/* Feedback */
+.feedback {
+    margin-top: 135px;
+    padding: 96px 0;
+    background: #2e2100;
+}
+
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback .feedback-item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.feedback-list .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback-list .info {
+    padding-right: 10px;
+}
+
+.feedback-list .info .name {
+    margin-top: 18px;
+    color: #f7f7f7;
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.41;
+}
+
+.feedback-list .info .desc {
+    margin-top: 4px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    line-height: 1.85;
+}
+
+.feedback-list .dots {
+    margin-top: 28px;
+    display: flex;
+    gap: 0 6px;
+}
+
+.feedback-list .dots .dot {
+    cursor: pointer;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+}
+
+.feedback-list .dots .dot.active {
+    background-color: var(--primary-color);
+    cursor: default;
+}
+.feedback-list .content {
+    width: calc(100% - 34.18%);
+}
+
+.feedback-list .content blockquote {
+    margin-left: 30px;
+    color: #fff;
+    font-size: 2.6rem;
+    font-style: italic;
+    line-height: 1.53;
 }
