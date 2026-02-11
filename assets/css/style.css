@@ -36,18 +36,40 @@ a {
     line-height: 50px;
     border-radius: 999px;
 }
+
 .btn:hover {
     opacity: 0.8;
 }
+
+.heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -0.116rem;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+    letter-spacing: -0.076rem;
+}
+
 /* Header */
 .header {
     background: #fffcf4;
 }
+
 .header.fixed {
     position: sticky;
     top: -23px;
     z-index: 10; /* đảm bảo header nằm trên */
 }
+
 .header .body {
     display: flex;
     align-items: center;
@@ -113,6 +135,7 @@ a {
 
 .media-block .img {
     width: 470px;
+    max-width: 100%;
     height: 685px;
     object-fit: cover;
     border-radius: 20px;
@@ -232,16 +255,14 @@ a {
     font-weight: 600;
     line-height: 1.66;
 }
-.content-block:nth-child(4) desc {
-    margin-top: 44px;
-}
+
 .content-block .desc.stats {
     margin-top: 8px;
 }
 
 .content-block .desc.stats strong {
     color: #171100;
-    font-family: Sen;
+    font-family: var(--font-heading);
     padding-right: 8px;
     font-size: 4.4rem;
     font-weight: 700;
@@ -250,4 +271,49 @@ a {
 
 .content-block .desc.stats strong + strong {
     margin-left: 28px;
+}
+
+/* Popular */
+.popular {
+    margin-top: 135px;
+    padding: 65px 0;
+}
+
+.popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-top .desc {
+    margin-top: 16px;
+    color: #5f5b53;
+    width: 458px;
+    font-size: 1.8rem;
+    line-height: 1.66;
+}
+
+.popular-top .controls {
+    display: flex;
+    gap: 0 18px;
+}
+
+.popular-top .control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: var(--primary-color);
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+}
+
+.popular-top .control-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
 }
